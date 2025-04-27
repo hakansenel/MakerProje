@@ -23,7 +23,7 @@ router.post('/register', async (req, res) => {
 
   try {
     await newUser.save();
-    res.status(201).json({ message: 'Kullanıcı başarıyla oluşturuldu!' });
+    return res.status(201).json({ message: 'Kullanıcı başarıyla oluşturuldu!' });
   } catch (error) {
     res.status(500).json({ message: 'Bir hata oluştu!' });
   }
